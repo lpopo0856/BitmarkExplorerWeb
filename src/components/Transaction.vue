@@ -12,6 +12,9 @@
     <a-descriptions-item label="txSignature" :span="4">
       {{Transaction.txSignature}}
     </a-descriptions-item>
+    <a-descriptions-item label="txOwner" :span="4">
+      {{Transaction.txOwner}}
+    </a-descriptions-item>
     <a-descriptions-item label="txCountersignature" :span="4">
       {{Transaction.txCountersignature}}
     </a-descriptions-item>

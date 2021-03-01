@@ -40,11 +40,6 @@ const columns = [
     key: "txBlockNumber",
     ellipsis: true,
   },
-  {
-    title: "txModifiedAt",
-    dataIndex: "txModifiedAt",
-    key: "txModifiedAt",
-  },
 ];
 export default {
   data() {
