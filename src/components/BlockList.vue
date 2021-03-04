@@ -1,5 +1,5 @@
 <template>
-  <a-table :columns="columns" :data-source="BlockList" style="width: auto"> 
+  <a-table :columns="columns" :data-source="BlockList" style="width: auto" rawKey="blockNumber"> 
     <a slot="blockHash" slot-scope="text" @click="onBlockHash(text)">{{ text }}</a>
   </a-table>
 </template>
@@ -43,8 +43,8 @@ export default {
     },
   },
   destroyed() {
-    console.log('destroying')
-    this.$store.commit("CleanBlockList")
+    // console.log('destroying')
+    // this.$store.commit("CleanBlockList")
   },
 };
 </script>

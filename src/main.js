@@ -11,7 +11,7 @@ Vue.config.productionTip = false
 Vue.use(Antd)
 
 Vue.use(new VueSocketIO({
-  debug: true,
+  debug: false,
   connection: SocketIO('http://localhost:3030'),
   vuex: {
     store,

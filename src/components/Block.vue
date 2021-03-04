@@ -3,6 +3,7 @@
     :columns="columns"
     :data-source="TransactionList"
     style="width: auto"
+    rawKey="txId"
   >
   <a slot="txId" slot-scope="text" @click="onTxId(text)">{{ text }}</a>
   </a-table>
