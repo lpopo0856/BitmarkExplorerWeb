@@ -34,7 +34,7 @@ export default {
     }
   },
   created () {
-    this.$store.dispatch("GetBlockList")
+    // this.$store.dispatch("GetBlockList")
   },
   methods: {
     onBlockHash(blockHash) {

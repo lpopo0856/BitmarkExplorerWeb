@@ -35,19 +35,19 @@ export default new Vuex.Store({
     },
     CleanAsset(state) {
       state.Asset = {}
-    },
+    }
   },
   actions: {
-    GetBlockList(context) {
-      axios.get('/api/block?page_id=1')
-        .then(function (response) {
-          console.log(response)
-          context.commit('SetBlockList',response.data)
-        })
-        .catch(function (error) {
-          console.log(error)
-        })
-    },
+    // GetBlockList(context) {
+    //   axios.get('/api/block?page_id=1')
+    //     .then(function (response) {
+    //       console.log(response)
+    //       context.commit('SetBlockList',response.data)
+    //     })
+    //     .catch(function (error) {
+    //       console.log(error)
+    //     })
+    // },
     GetTransactionList(context, blockId) {
       console.log(blockId)
       axios.get(`/api/block/${blockId}`)
@@ -81,6 +81,9 @@ export default new Vuex.Store({
           console.log(error)
         })
     },
+    SOCKET_latestBlock(context, data) {
+      context.commit('SetBlockList',data)
+    }
   },
   modules: {
   }
