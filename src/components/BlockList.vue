@@ -33,18 +33,11 @@ export default {
       return this.$store.state.BlockList
     }
   },
-  created () {
-    // this.$store.dispatch("GetBlockList")
-  },
   methods: {
     onBlockHash(blockHash) {
       console.log(blockHash);
       this.$router.push({ name: 'Block:id', params: { id: blockHash } })
     },
-  },
-  destroyed() {
-    // console.log('destroying')
-    // this.$store.commit("CleanBlockList")
-  },
+  }
 };
 </script>
